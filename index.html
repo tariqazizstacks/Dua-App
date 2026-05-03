@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dua-App</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url("img/background.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #box{
+            height: 95vh;
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 3px rgb(189, 145, 69) solid;
+            border-radius: 20px;
+        }
+        h1{
+            color: #f5174b;
+            height: 40px;
+            background-color: #efbd17;
+            margin-top: 0%;
+            border-radius:17px;
+        }
+        img{
+            border: 3px rgb(189, 145, 69) solid;
+            border-radius: 20px;
+            margin-bottom:0%;
+        }
+        button{
+            height: 60px;
+            width: 180px;
+            background-color: 	#006400;
+            color:	#FFFFFF;
+            border: 3px rgb(189, 145, 69) solid;
+            border-radius: 13px;
+            margin-bottom:0%;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a simple Dua app that displays different duas. Add a button to show a new dua each time it is clicked. -->
+     <div id="box">
+        <h1>Learn Five DUWAS</h1>
+        <!-- <video src="" height="300px" autoplay>your bowser not supported the video</video> -->
+     <img src="img/general.png" alt="" width="500px">
+     <audio src="duwa"></audio>
+     <button>Click Here!</button>
+     </div>
+
+<script>
+    let heading= document.querySelector("h1");
+    // let vid= document.querySelector("video");
+    let aud=document.querySelector("audio");
+    let image=document.querySelector("img");
+    let btn= document.querySelector("button");
+    btn.addEventListener("click",()=>{
+        let randomNum= Math.ceil(Math.random()*5);
+        if(randomNum==1){
+            image.src="img/k3.png";
+            image.style.width="520px"
+            aud.src="audio/k1.mp3";
+        }else if(randomNum==2){
+            image.src="img/ms1.png";
+            aud.src="audio/m2.mp3";
+
+        }else if(randomNum==3){
+            image.src="img/m2.png";
+            image.style.width="520px"
+            aud.src="audio/m3.mp3";
+        }else if(randomNum==4){
+            image.src="img/s4.png";
+            image.style.width="520px"
+            aud.src="audio/s4.mp3";
+        }else if(randomNum==5){
+            image.src="img/p5.png";
+            aud.src="audio/p5.mp3";
+        } 
+        aud.play();
+    })
+
+</script>
+</body>
+</html>

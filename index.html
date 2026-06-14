@@ -4,58 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dua-App</title>
-    <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: url("img/background.png");
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        #box{
-            height: 95vh;
-            width: 700px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 3px rgb(189, 145, 69) solid;
-            border-radius: 20px;
-        }
-        h1{
-            color: #f5174b;
-            height: 47px;
-            justify-content: center;
-            align-items: center;
-            width: 300px;
-            background-color: #006400;
-            margin-top: 0%;
-            padding-left: 12px;
-            border-radius:17px;
-        }
-        img{
-            border: 3px rgb(189, 145, 69) solid;
-            border-radius: 20px;
-            margin-bottom:0%;
-        }
-        button{
-            height: 60px;
-            width: 180px;
-            background-color: 	#006400;
-            color:	#FFFFFF;
-            border: 3px rgb(189, 145, 69) solid;
-            border-radius: 13px;
-            margin-bottom:0%;
-            margin-top: 60px;
-        }
-        button:hover{
-            background-color: rgb(189, 145, 69);
-            color:	#eb0404;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -67,37 +16,6 @@
     <button>Click Here!</button>
     </div>
 
-<script>
-    let heading= document.querySelector("h1");
-    // let vid= document.querySelector("video");
-    let aud=document.querySelector("audio");
-    let image=document.querySelector("img");
-    let btn= document.querySelector("button");
-    btn.addEventListener("click",()=>{
-        let randomNum= Math.ceil(Math.random()*5);
-        if(randomNum==1){
-            image.src="img/k3.png";
-            image.style.width="520px"
-            aud.src="audio/k1.mp3";
-        }else if(randomNum==2){
-            image.src="img/ms1.png";
-            aud.src="audio/m2.mp3";
-
-        }else if(randomNum==3){
-            image.src="img/m2.png";
-            image.style.width="520px"
-            aud.src="audio/m3.mp3";
-        }else if(randomNum==4){
-            image.src="img/s4.png";
-            image.style.width="520px"
-            aud.src="audio/s4.mp3";
-        }else if(randomNum==5){
-            image.src="img/p5.png";
-            aud.src="audio/p5.mp3";
-        } 
-        aud.play();
-    })
-
-</script>
+ <script src="script.js"></script>
 </body>
 </html>
